@@ -39,4 +39,5 @@ helm upgrade "$STACK" "$CHART" \
 --set database.dbUser.existingSecret.passwordKey="password" \
 --set database.rootUser.existingSecret.name="fusionauth-credentials" \
 --set database.rootUser.existingSecret.passwordKey="rootpassword" \
---version "$CHART_VERSION"
+--version "$CHART_VERSION" \
+--set search.host=opensearch-cluster-master
