@@ -12,7 +12,7 @@ set -e
 ################################################################################
 STACK="fusionauth"
 CHART="fusionauth/fusionauth"
-CHART_VERSION="1.68.0"
+CHART_VERSION="1.69.3"
 NAMESPACE="fusionauth"
 
 if [ -z "${MP_KUBERNETES}" ]; then

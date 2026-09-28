@@ -6,7 +6,7 @@ FusionAuth is a modern platform for Customer Identity and Access Management (CIA
 
 | Package       | Chart Version | Application Version | License                                  |
 |---------------|---------------|---------------------|------------------------------------------|
-| FusionAuth    | 1.68.0        | 1.68.0              | [License](https://fusionauth.io/license) |
+| FusionAuth    | 1.69.3        | 1.69.3              | [License](https://fusionauth.io/license) |
 
 ### Resources
 This stack requires Kubernetes 1.23.0 or later and a Digital Ocean Kubernetes Cluster with minimum of 3 nodes of 4 GB RAM and 2 vCPUs each.
