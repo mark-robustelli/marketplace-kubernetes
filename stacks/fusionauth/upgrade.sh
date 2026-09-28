@@ -29,7 +29,14 @@ else
   VALUES="https://raw.githubusercontent.com/digitalocean/marketplace-kubernetes/master/stacks/fusionauth/values.yml"
 fi
 
+kubectl annotate --namespace "$NAMESPACE" secret/fusionauth-credentials \
+  helm.sh/resource-policy=keep --overwrite
+
 helm upgrade "$STACK" "$CHART" \
 --namespace "$NAMESPACE" \
 --values "$VALUES" \
+--set database.dbUser.existingSecret.name="fusionauth-credentials" \
+--set database.dbUser.existingSecret.passwordKey="password" \
+--set database.rootUser.existingSecret.name="fusionauth-credentials" \
+--set database.rootUser.existingSecret.passwordKey="rootpassword" \
 --version "$CHART_VERSION"
